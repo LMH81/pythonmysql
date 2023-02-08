@@ -3,7 +3,7 @@ import pymysql,json
 
 class usuarios:
  def datos(self):
-   miConexion = pymysql.connect( host='localhost', user= 'root', passwd='', db='nueva' )
+   miConexion = pymysql.connect(host='localhost', user= 'root', passwd='', db='nueva' )
    cur = miConexion.cursor()
    cur.execute( "SELECT nombre, apellidos FROM usuarios" )
    rows=cur.fetchall()
